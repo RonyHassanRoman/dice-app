@@ -9,7 +9,8 @@ class Roww extends StatefulWidget {
 }
 
 class _RowwState extends State<Roww> {
-  var leftDiceNumber = 3;
+  var leftDiceNumber = 6;
+  var rightDiceNumber = 6;
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -20,6 +21,7 @@ class _RowwState extends State<Roww> {
               onPressed: () {
                 setState(() {
                   leftDiceNumber = Random().nextInt(6) + 1;
+                  rightDiceNumber = Random().nextInt(6) + 1;
                 });
               },
               child: Image.asset('assets/dice$leftDiceNumber.png'),
@@ -27,8 +29,13 @@ class _RowwState extends State<Roww> {
           ),
           Expanded(
             child: TextButton(
-              onPressed: () {},
-              child: Image.asset('assets/dice1.png'),
+              onPressed: () {
+                setState(() {
+                  leftDiceNumber = Random().nextInt(6) + 1;
+                  rightDiceNumber = Random().nextInt(6) + 1;
+                });
+              },
+              child: Image.asset('assets/dice$rightDiceNumber.png'),
             ),
           ),
         ],
