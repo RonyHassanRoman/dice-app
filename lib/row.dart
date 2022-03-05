@@ -1,6 +1,5 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class Roww extends StatefulWidget {
   const Roww({Key? key}) : super(key: key);
@@ -17,13 +16,17 @@ class _RowwState extends State<Roww> {
       child: Row(
         children: [
           Expanded(
-            child: FlatButton(
-              onPressed: () {},
-              child: Image.asset('assets/dice1.png'),
+            child: TextButton(
+              onPressed: () {
+                setState(() {
+                  leftDiceNumber = Random().nextInt(6) + 1;
+                });
+              },
+              child: Image.asset('assets/dice$leftDiceNumber.png'),
             ),
           ),
           Expanded(
-            child: FlatButton(
+            child: TextButton(
               onPressed: () {},
               child: Image.asset('assets/dice1.png'),
             ),
