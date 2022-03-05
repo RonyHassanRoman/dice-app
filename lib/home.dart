@@ -7,9 +7,9 @@ class Homee extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.redAccent[100],
+      backgroundColor: Colors.blue,
       appBar: AppBar(
-        backgroundColor: Colors.redAccent[100],
+        backgroundColor: Colors.blue,
         title: const Text('Dice App'),
         centerTitle: true,
       ),
